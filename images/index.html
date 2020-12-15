@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #imageGroups div {
+      float: left;
+    }
+
+    #imageGroups img {
+      float: left;
+    }
+
+    #imageGroups ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #imageGroups ul li {
+      display: inline;
+    }
+
+    #imageGroups a,
+    a:visited,
+    #imageGroups a:active {
+      color: #990000;
+      text-decoration: none;
+      border-right: 2px solid black;
+      padding: 0 .2em;
+    }
+
+    #imageGroups li.last a {
+      border-right: none;
+    }
+
+    #imageGroups div#image-group {
+      width: 12.25em;
+    }
+
+    #imageGroups div#list {
+      margin-top: .2em;
+      font-size: 110%;
+    }
+  </style>
+
+  <style>
+    #imagesTable table {
+      font-family: Arial;
+      border-collapse: collapse;
+    }
+
+    #imagesTable table,
+    #imagesTable th,
+    #imagesTable td {
+      border: thin solid #D0D0D0;
+    }
+
+    #imagesTable th,
+    #imagesTable td {
+      padding: .3em;
+      width: 8em;
+    }
+
+    #imagesTable th {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    #imagesTable td {
+      text-align: center;
+    }
+
+    #imagesTable tr.colhead th {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    #imagesTable .visually-hidden {
+      position: absolute;
+      clip: rect(1px 1px 1px 1px);
+      /* for Internet Explorer */
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 0;
+      border: 0;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+    }
+
+    #imagesTable img {
+      width: 2.25em;
+    }
+  </style>
+
+  <style>
+    #labelsOther .arrow-right:after {
+      content: '';
+      position absolute;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid #1E4774;
+      display: inline-block;
+      margin-left: .3em
+    }
+
+    #labelsOther p,
+    #labelsOther li {
+      position: relative;
+    }
+
+    #labelsOther ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #labelsOther li {
+      padding-bottom: 1em;
+    }
+
+    #labelsOther img {
+      float: left;
+      height: 1.5em;
+      margin-right: .7em;
+    }
+
+    #labelsOther div {
+      border: 2px solid #D0D0D0;
+      padding: 1em;
+      width: 18em;
+      color: #6E6E6E;
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 120%;
+      padding-right: .5em;
+    }
+
+    #labelsOther h2,
+    #labelsOther p {
+      padding: 0;
+      margin: 0;
+    }
+
+    #labelsOther li.arrow-right,
+    #labelsOther p.arrow-right {
+      color: #1E4774;
+    }
+
+    #labelsOther input {
+      margin-top: .5em;
+      font-weight: bold;
+      font-family: Arial;
+      padding: .4em;
+      font-size: 12pt;
+    }
+
+    #labelsOther h2 {
+      font-size: 120%;
+      margin-bottom: 1em;
+    }
+
+    #labelsOther button {
+      color: White;
+      font-weight: bold;
+      font-family: Arial;
+      padding: .4em;
+      margin-left: .2em;
+      font-size: 14pt;
+      border-radius: 5px;
+      border: none;
+      background: #707F8A;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#B0C0CB, #707F8A);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#B0C0CB, #707F8A);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#B0C0CB, #707F8A);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#B0C0CB, #707F8A);
+      /* Standard syntax */
+    }
+
+    #labelsOther img#email {
+      -ms-transform: rotate(-45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-45deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(-45deg);
+      height: 1.2em;
+    }
+
+    #labelsOther img#location {
+      height: 2em;
+    }
+  </style>
+  <style>
+    /* hr {
+      clear: both;
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>Images</h1>
+  <div id="basicAltText">
+    <h2>Basic Alternative Text Example</h2>
+    <img src="legal.jpg" alt="gavel" />
+  </div>
+  <br>
+  <hr>
+  <h2>Informational Images</h2>
+  <div id="imageGroups">
+    <h3>Image Groups</h3>
+    <h4 id="product">Acorn 'Chinchilla' Slipper</h4>
+    <div id="image-group">
+      <img src="informational/star-full.jpg" alt="4 out of 5 stars">
+      <img src="informational/star-full.jpg" alt="">
+      <img src="informational/star-full.jpg" alt="">
+      <img src="informational/star-full.jpg" alt="">
+      <img src="informational/star-empty.jpg" alt="">
+    </div>
+    <div id="list">
+      <ul>
+        <li><a href="#" aria-describedby="product">5 reviews</a></li>
+        <li><a href="#" aria-describedby="product">write a review</a></li>
+        <li class="last"><a href="#" aria-describedby="product">discuss this item</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div id="imagesTable">
+
+    <h3>Images in Table</h3>
+    <table>
+      <tr class="colhead">
+        <th scope="col"><span class="visually-hidden">Feature Category</span></th>
+        <th scope="col">Silver Plan</th>
+        <th scope="col">Gold Plan</th>
+      </tr>
+      <tr>
+        <th scope="row">Disk Space</th>
+        <td>100GB</td>
+        <td>250GB</td>
+      </tr>
+      <tr>
+        <th scope="row">Daily Backups</th>
+        <td><img src="informational/green-check.png" alt="included" /></td>
+        <td><img src="informational/green-check.png" alt="included" /></td>
+      </tr>
+      <tr>
+        <th scope="row">SSL Available</th>
+        <td><img src="informational/red-x.png" alt="not included" /></td>
+        <td><img src="informational/green-check.png" alt="included" /></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <hr>
+  <div id="imagesText">
+    <h3>Images of Text</h3>
+    <img src="informational/securing.png" alt="Securing your life">
+  </div>
+  <br>
+  <hr>
+  <div id="labelsOther">
+
+    <h3>Images Used to Label other content</h3>
+    <div>
+      <h2>Talk to a Business Banker</h2>
+      <ul>
+        <li><img src="informational/phone.png" alt="Phone:" id="phone"> 1-800-448-2265</li>
+        <li class="arrow-right"><img src="informational/email.png" alt="Email:" id="email"> Have a banker Contact me
+        </li>
+        <li>
+          <img src="informational/location.png" alt="Location:" id="location">Find a branch
+          <form>
+            <input type="text" placeholder="Enter Zip, City or State"
+              aria-label="Find a branch (Enter Zip, City or State)" /><button type="submit">Find</button>
+          </form>
+        </li>
+      </ul>
+      <p class="arrow-right">What you'll need to open an account</p>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <h2>Context</h2>
+  <div id="contextLinks">
+
+    <h3>Alternative Text Context Example - Context and Links</32>
+      <h4>Image Adds Inportant Information to Link Text</h4>
+      <p><a href="application.pdf">Download an application<img src="context/pdf.jpg" alt="PDF"></a></p>
+      <h4>Image Alone Provides Link Text</h4>
+      <h5>Application Downloads</h5>
+      <p>
+        <a href="application.pdf"><img src="context/pdf.jpg" alt="Application in PDF"></a>
+        <a href="application.docx"><img src="context/word.jpg" alt="Application in Microsoft Word"></a>
+      </p>
+  </div>
+  <br>
+  <hr>
+  <div id="descText">
+
+    <h3>Alternative Text Context Example - Description in the Text</h3>
+    <h4>Denali</h4>
+    <img src="context/denali.jpg" alt="Denali">
+    <p>Denali is a the tallest mountain in North America, located in Alaska. Its official name was recently changed from
+      Mount McKinley to Denali.</p>
+  </div>
+  <br>
+  <hr>
+  <div id="descText2">
+
+    <h3>Alternative Text Context Example - Description in the Text V2</h3>
+    <h4>Denali</h4>
+    <img src="context/denali.jpg" alt="">
+    <p>Denali is a the tallest mountain in North America, located in Alaska. Its official name was recently changed from
+      Mount McKinley to Denali.</p>
+  </div>
+  <br>
+  <hr>
+  <div id="noTextDesc">
+
+    <h3>Alternative Text Context Example - No Text Description</h3>
+    <h4>Views of Denali</h4>
+    <img src="context/denali.jpg" alt="Denali, mostly covered in snow, with a lake in the foreground">
+  </div>
+</body>
+
+</html>

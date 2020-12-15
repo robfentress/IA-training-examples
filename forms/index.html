@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+
+<body>
+  <h1>Forms</h1>
+  <div id="titleVAria">
+
+    <h2>Title vs ARIA-label Example</h2>
+    <p><label for="title">Form field with title:</label> <input type="text" title="Enter a number 5-10" id="title"></p>
+    <p><label for="ariaLabel">Form field with aria-label:</label> <input type="text" aria-label="Enter a number 1-5"
+        id="ariaLabel"></p>
+  </div>
+  <div id="htmlRequired">
+
+    <h2>HTML5 Required Example</h2>
+    <form>
+      <label for="first-name">First Name *</label>
+      <input type="text" name="first-name" id="first-name" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
